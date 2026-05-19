@@ -1,0 +1,138 @@
+.heroSection,
+.contentSection {
+  margin-bottom: 5rem;
+}
+
+.heroSection {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroSectionContent {
+  max-width: 540px;
+  p {
+    max-width: 760px;
+    font-size: 1.08rem;
+  }
+}
+
+.heroSectionActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 2rem;
+
+  .githubLink {
+    color: var(--muted);
+    font-weight: 750;
+    padding: 0.75rem 1.1rem;
+    border: 1px solid var(--muted);
+    border-radius: 4px;
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .githubLink:hover {
+    color: var(--text);
+    border-color: var(--text);
+
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.eyebrow,
+.heroPanelLabel {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heroPanel {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+
+  &::before {
+    position: absolute;
+    inset: -40% -30% auto auto;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background: rgba(110, 231, 249, 0.18);
+    content: "";
+  }
+
+  ul {
+    display: grid;
+    gap: 0.8rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    color: var(--text);
+
+    &::before {
+      margin-right: 0.55rem;
+      color: var(--accent);
+      content: "\2713";
+    }
+  }
+}
+
+.techGrid,
+.cardGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.techGrid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.techCard {
+  padding: 1rem;
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+}
+
+.cardGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 980px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+
+  .techGrid,
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSectionActions {
+    width: 100%;
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  .techGrid,
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
