@@ -1,35 +1,34 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
+import type { ReactNode } from 'react'
+
 import styles from './Button.module.scss'
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost'
-
-type ButtonBaseProps = {
+type ButtonProps = {
   children: ReactNode
-  variant?: ButtonVariant
+  href?: string
+  variant?: 'primary' | 'secondary'
   className?: string
+  type?: 'button' | 'submit' | 'reset'
 }
 
-type ButtonProps = ButtonBaseProps &
-  (
-    | ({ href: string } & AnchorHTMLAttributes<HTMLAnchorElement>)
-    | ({ href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>)
-  )
-
-export function Button({ children, className = '', variant = 'primary', ...props }: ButtonProps) {
+export function Button({
+  children,
+  href,
+  variant = 'primary',
+  className,
+  type = 'button',
+}: ButtonProps) {
   const classes = [styles.button, styles[variant], className].filter(Boolean).join(' ')
 
-  if ('href' in props && props.href) {
+  if (href) {
     return (
-      <a className={classes} {...props}>
+      <a className={classes} href={href}>
         {children}
       </a>
     )
   }
 
-  const buttonProps = props as ButtonHTMLAttributes<HTMLButtonElement>
-
   return (
-    <button className={classes} type={buttonProps.type ?? 'button'} {...buttonProps}>
+    <button className={classes} type={type}>
       {children}
     </button>
   )

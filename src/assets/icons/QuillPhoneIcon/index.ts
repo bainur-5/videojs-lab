@@ -1,0 +1,1 @@
+export { QuillPhoneIcon } from './QuillPhoneIcon'

@@ -1,0 +1,1 @@
+export { MaterialSymbolsLightPauseOutlineRoundedIcon } from './MaterialSymbolsLightPauseOutlineRoundedIcon'

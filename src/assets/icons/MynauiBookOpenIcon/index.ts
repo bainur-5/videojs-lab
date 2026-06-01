@@ -1,0 +1,1 @@
+export { MynauiBookOpenIcon } from './MynauiBookOpenIcon'

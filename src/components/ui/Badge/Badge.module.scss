@@ -1,0 +1,30 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  width: fit-content;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.neutral {
+  background: #eceff3;
+  color: var(--color-muted);
+}
+
+.teal {
+  background: var(--color-soft-teal);
+  color: var(--color-teal-dark);
+}
+
+.coral {
+  background: var(--color-soft-coral);
+  color: var(--color-coral);
+}
+
+.amber {
+  background: #fff2c8;
+  color: var(--color-amber);
+}

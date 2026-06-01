@@ -1,0 +1,49 @@
+import type { SVGProps } from 'react'
+
+import styles from './MynauiGithubIcon.module.scss'
+
+type MynauiGithubIconProps = Omit<SVGProps<SVGSVGElement>, 'color'> & {
+  size?: number | string
+  color?: string
+  title?: string
+  strokeWidth?: number | string
+}
+
+export function MynauiGithubIcon({
+  size = 24,
+  color = 'currentColor',
+  title,
+  strokeWidth = 1.5,
+  className = '',
+  ...props
+}: MynauiGithubIconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      className={[styles.icon, className].filter(Boolean).join(' ')}
+      color={color}
+      fill="none"
+      aria-hidden={title ? undefined : true}
+      role={title ? 'img' : undefined}
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <path
+        d="M3.5 15.668C3.95 15.722 4.28333 15.9279 4.5 16.2859C4.826 16.8229 6.037 18.812 7.413 18.812H9.5M15.172 15.299C15.7207 16.0176 15.995 16.663 15.995 17.235V21M10.37 15.391C9.79 16.027 9.50033 16.6313 9.501 17.204V21"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M15.172 15.299C16.374 15.049 17.465 14.617 18.312 13.983C19.76 12.899 20.5 11.225 20.5 9.57197C20.5 8.41197 20.06 7.32897 19.296 6.41197C18.871 5.90097 20.115 2.53997 19.01 3.05297C17.905 3.56697 16.285 4.25097 15.436 3.99997C14.527 3.73197 13.536 3.58397 12.5 3.58397C11.6 3.58397 10.734 3.69497 9.926 3.90097C8.752 4.19897 7.63 3.53797 6.5 3.05297C5.37 2.56897 5.987 6.06097 5.651 6.47497C4.921 7.37997 4.5 8.43997 4.5 9.57197C4.5 11.225 5.395 12.899 6.843 13.982C7.808 14.704 9.017 15.165 10.37 15.392"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}

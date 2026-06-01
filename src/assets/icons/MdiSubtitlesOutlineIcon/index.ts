@@ -1,0 +1,1 @@
+export { MdiSubtitlesOutlineIcon } from './MdiSubtitlesOutlineIcon'

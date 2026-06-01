@@ -1,0 +1,1 @@
+export { SolarCheckCircleLinearIcon } from './SolarCheckCircleLinearIcon'

@@ -1,0 +1,1 @@
+export { HumbleiconsVolumeIcon } from './HumbleiconsVolumeIcon'

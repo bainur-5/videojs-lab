@@ -1,0 +1,1 @@
+export { EpRightIcon } from './EpRightIcon'

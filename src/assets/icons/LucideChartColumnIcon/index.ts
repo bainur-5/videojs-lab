@@ -1,0 +1,1 @@
+export { LucideChartColumnIcon } from './LucideChartColumnIcon'

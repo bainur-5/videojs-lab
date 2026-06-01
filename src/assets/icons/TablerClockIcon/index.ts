@@ -1,0 +1,1 @@
+export { TablerClockIcon } from './TablerClockIcon'

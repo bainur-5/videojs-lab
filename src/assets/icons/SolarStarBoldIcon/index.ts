@@ -1,0 +1,1 @@
+export { SolarStarBoldIcon } from './SolarStarBoldIcon'

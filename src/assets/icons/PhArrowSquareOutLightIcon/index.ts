@@ -1,0 +1,1 @@
+export { PhArrowSquareOutLightIcon } from './PhArrowSquareOutLightIcon'

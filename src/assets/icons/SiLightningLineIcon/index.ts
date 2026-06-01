@@ -1,0 +1,1 @@
+export { SiLightningLineIcon } from './SiLightningLineIcon'

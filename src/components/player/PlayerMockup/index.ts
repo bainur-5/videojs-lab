@@ -1,0 +1,1 @@
+export { PlayerMockup } from './PlayerMockup'

@@ -1,54 +1,37 @@
-import { Button } from '../../ui/Button/Button'
-import cls from './Header.module.scss'
+import { Button } from '@/components/ui/Button'
 
-interface HeaderProps {
-  activePage: string
-  onNavigate: (page: string) => void
-}
+import styles from './Header.module.scss'
 
 const navItems = [
-  { id: 'players', label: 'Players' },
-  { id: 'features', label: 'Features' },
-  { id: 'case-study', label: 'Case Study' },
-  { id: 'about', label: 'About' },
+  { label: 'Features', href: '#features' },
+  { label: 'Players', href: '/players' },
+  { label: 'Analytics', href: '#analytics' },
+  { label: 'Case study', href: '#case-study' },
 ]
 
-export function Header({ activePage, onNavigate }: HeaderProps) {
+export function Header() {
   return (
-    <header className={cls.siteHeader}>
-      <button className={cls.brand} type="button" onClick={() => onNavigate('home')}>
-        <span className={cls.brandMark} aria-hidden="true" />
-        <span>
-          <strong>Video.js Lab</strong>
-        </span>
-      </button>
-
-      <nav className={cls.siteNav} aria-label="Primary navigation">
+    <header className={styles.header}>
+      <a className={styles.logo} href="#top" aria-label="PlayerOS home">
+        <div className={styles.logoIcon} aria-hidden="true">
+          
+        </div>
+        Player<span>OS</span>
+      </a>
+      <nav className={styles.nav} aria-label="Main navigation">
         {navItems.map((item) => (
-          <button
-            aria-current={activePage === item.id ? 'page' : undefined}
-            className={cls.siteNavLink}
-            key={item.id}
-            onClick={() => onNavigate(item.id)}
-            type="button"
-          >
+          <a key={item.href} href={item.href}>
             {item.label}
-          </button>
+          </a>
         ))}
-      </nav>
-
-      <div className={cls.rightLinks}>
-        <a
-          className={cls.githubLink}
-          href="https://github.com/videojs/video.js"
-          target="_blank"
-          rel="noreferrer"
-        >
-          View GitHub
+        <a href="https://github.com/bainur-5" target="_blank" rel="noopener noreferrer">
+        
+          GitHub
         </a>
-
-        <Button variant='primary' onClick={() => onNavigate('players')}>Explore players</Button>
-      </div>
+      </nav>
+      <Button href="#cta" variant="secondary" className={styles.action}>
+        Experlore Player
+      </Button>
     </header>
   )
 }
