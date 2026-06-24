@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/Button'
+import { EpRightIcon, MynauiGithubIcon as GitHubIcon, GlyphsSeekSkipIcon, HugeiconsCheckmarkCircle04Icon, MaterialSymbolsLightKeyboardOutlineIcon, MaterialSymbolsLightPauseOutlineRoundedIcon, PhArrowSquareOutLightIcon, QlementineIconsMovie16Icon, SolarPlaylistOutlineIcon, StreamlineLayers1Icon } from '@/assets/icons'
 
 import styles from './Header.module.scss'
 
@@ -13,8 +14,8 @@ export function Header() {
   return (
     <header className={styles.header}>
       <a className={styles.logo} href="#top" aria-label="PlayerOS home">
+          <MaterialSymbolsLightPauseOutlineRoundedIcon />
         <div className={styles.logoIcon} aria-hidden="true">
-          
         </div>
         Player<span>OS</span>
       </a>
@@ -24,12 +25,12 @@ export function Header() {
             {item.label}
           </a>
         ))}
-        <a href="https://github.com/bainur-5" target="_blank" rel="noopener noreferrer">
-        
+        <a href="https://github.com/bainur-5" target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
+          <GitHubIcon size={14}/>
           GitHub
         </a>
       </nav>
-      <Button href="#cta" variant="secondary" className={styles.action}>
+      <Button href="#cta" variant="primary" className={styles.action}>
         Experlore Player
       </Button>
     </header>

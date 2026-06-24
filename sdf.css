@@ -1,0 +1,165 @@
+.edu-slider {
+  margin-bottom: 70px;
+}
+
+/* Верхняя часть: заголовок + стрелки */
+.edu-slider .edu-slider__header .elementor-widget-wrap {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-bottom: 28px;
+}
+
+/* Заголовок h2 */
+.edu-slider .edu-slider__heading {
+  flex: 1 1 auto;
+  margin: 0 !important;
+}
+
+/*.edu-slider .edu-slider__heading .elementor-heading-title {*/
+/*  margin: 0;*/
+/*  font-size: 24px;*/
+/*  font-weight: 700;*/
+/*  color: #222;*/
+/*  line-height: 1.2;*/
+/*}*/
+
+/* Кнопки стрелок */
+.edu-slider .edu-slider__arrow {
+  width: auto !important;
+  flex: 0 0 auto;
+  margin: 0 !important;
+}
+
+.edu-slider .edu-slider__arrow .elementor-button {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #48b982 !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  font-size: 18px;
+  line-height: 1;
+  box-shadow: none !important;
+}
+
+.edu-slider .edu-slider__arrow .elementor-button .elementor-align-icon-right {
+  margin-left: 0px;
+}
+
+.edu-slider .edu-slider__arrow .elementor-button:hover {
+  background: #3aa873 !important;
+  color: #fff !important;
+}
+
+/* Нижняя часть: дорожка карточек */
+.edu-slider .edu-slider__track .elementor-widget-wrap {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.edu-slider .edu-slider__track .elementor-widget-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+/* Карточка */
+.edu-slider .edu-slider__card {
+  flex: 0 0 calc(25% - 21px);
+  scroll-snap-align: start;
+  margin-bottom: 0 !important;
+}
+
+/* Картинка карточки */
+.edu-slider .edu-slider__card .elementor-image-box-img {
+  margin-bottom: 18px !important;
+}
+
+.edu-slider .edu-slider__card img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Заголовок карточки h3 */
+.edu-slider .edu-slider__card .widget-image-caption.wp-caption-text {
+  margin: 0;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.edu-slider .edu-slider__card .elementor-image-box-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.edu-slider .edu-slider__card .elementor-image-box-title a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Планшет */
+@media (max-width: 1024px) {
+  .edu-slider .edu-slider__card {
+    flex-basis: calc(50% - 14px);
+  }
+
+  .edu-slider .edu-slider__heading .elementor-heading-title {
+    font-size: 23px;
+  }
+}
+
+/* Мобилка */
+@media (max-width: 767px) {
+  .edu-slider {
+    margin-bottom: 50px;
+  }
+
+  .edu-slider .edu-slider__header .elementor-widget-wrap {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .edu-slider .edu-slider__heading .elementor-heading-title {
+    font-size: 20px;
+  }
+
+  .edu-slider .edu-slider__arrow .elementor-button {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 20px;
+  }
+
+  .edu-slider .edu-slider__track .elementor-widget-wrap {
+    gap: 16px;
+  }
+
+  .edu-slider .edu-slider__card {
+    flex-basis: 80%;
+  }
+
+  .edu-slider .edu-slider__card img {
+    height: 150px;
+  }
+
+  .edu-slider .edu-slider__card .elementor-image-box-title {
+    font-size: 22px;
+  }
+}
