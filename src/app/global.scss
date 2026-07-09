@@ -1,37 +1,48 @@
 :root {
-  --color-background: #070a12;
-  --color-surface: #101624;
-  --color-card: #151c2e;
-  --color-card-hover: #1b2540;
+  --color-background: #05070d;
+  --color-surface: #0d121c;
+  --color-card: #111827;
+  --color-card-hover: #172033;
 
-  --color-accent: #7c5cff;
-  --color-accent-secondary: #00d4ff;
+  --color-accent: #38bdf8;
+  --color-accent-secondary: #a3e635;
 
   --color-text: #f8fafc;
   --color-muted: #94a3b8;
+  --color-ink: var(--color-text);
 
   --color-border: rgba(148, 163, 184, 0.18);
   --color-border-strong: rgba(148, 163, 184, 0.28);
+  --color-line: var(--color-border);
 
-  --color-accent-rgb: 124, 92, 255;
-  --color-background-rgb: 7, 10, 18;
-  
+  --color-teal: #2dd4bf;
+  --color-teal-dark: #67e8f9;
+  --color-coral: #fb7185;
+  --color-amber: #fbbf24;
+  --color-soft-teal: rgba(45, 212, 191, 0.14);
+  --color-soft-coral: rgba(251, 113, 133, 0.14);
+  --color-soft-amber: rgba(251, 191, 36, 0.14);
 
-  --gradient-primary: linear-gradient(135deg, #7c5cff 0%, #00d4ff 100%);
+  --color-accent-rgb: 56, 189, 248;
+  --color-background-rgb: 5, 7, 13;
+
+  --gradient-primary: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 54%, #a3e635 100%);
   --gradient-page:
     radial-gradient(
-      circle at top right,
-      rgba(124, 92, 255, 0.24),
+      circle at 18% 8%,
+      rgba(56, 189, 248, 0.16),
       transparent 34%
     ),
     radial-gradient(
-      circle at bottom left,
-      rgba(0, 212, 255, 0.14),
+      circle at 82% 32%,
+      rgba(163, 230, 53, 0.11),
       transparent 32%
     ),
-    #070a12;
+    linear-gradient(180deg, #05070d 0%, #090d16 48%, #05070d 100%);
 
   --shadow-card: 0 24px 80px rgba(0, 0, 0, 0.32);
+  --shadow-soft: 0 22px 70px rgba(0, 0, 0, 0.38);
+  --radius: 18px;
   --radius-sm: 12px;
   --radius-md: 18px;
   --radius-lg: 28px;
@@ -47,7 +58,6 @@
 
 html {
   scroll-behavior: smooth;
-  justify-content: space-between;
 }
 
 body {
@@ -81,7 +91,7 @@ video {
 }
 
 ::selection {
-  background: rgba(124, 92, 255, 0.45);
+  background: rgba(56, 189, 248, 0.4);
   color: var(--color-text);
 }
 

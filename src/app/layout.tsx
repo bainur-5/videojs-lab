@@ -18,9 +18,9 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PlayerOS - Video.js Portfolio Project",
+  title: "Video.js Player Lab - Premium Frontend Portfolio",
   description:
-    "A premium Video.js media platform with custom UI, playlists, subtitles, watch progress and analytics.",
+    "A premium dark UI portfolio project for a future Video.js player laboratory built with Next.js, TypeScript and SCSS Modules.",
 };
 
 export default function RootLayout({

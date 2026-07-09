@@ -1,0 +1,1 @@
+export { FeaturedPlayers } from './FeaturedPlayers'

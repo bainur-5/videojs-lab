@@ -1,23 +1,21 @@
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
-import { AnalyticsSection } from '@/components/sections/AnalyticsSection'
-import { CaseStudySection } from '@/components/sections/CaseStudySection'
-import { CtaSection } from '@/components/sections/CtaSection'
-import { FeaturesSection } from '@/components/sections/FeaturesSection'
+// import { CTASection } from '@/components/sections/CTASection'
+import { FeaturedPlayers } from '@/components/sections/FeaturedPlayers'
 import { HeroSection } from '@/components/sections/HeroSection'
-import { PlayerPresetsSection } from '@/components/sections/PlayerPresetsSection'
+import { TechStack } from '@/components/sections/TechStack'
+
+import styles from './page.module.scss'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className={styles.main}>
         <HeroSection />
-        <PlayerPresetsSection />
-        <FeaturesSection />
-        <AnalyticsSection />
-        <CaseStudySection />
-        <CtaSection />
+        <TechStack />
+        <FeaturedPlayers />
+        {/* <CTASection /> */}
       </main>
       <Footer />
     </>

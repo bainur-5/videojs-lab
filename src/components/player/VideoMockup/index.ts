@@ -1,0 +1,1 @@
+export { VideoMockup } from './VideoMockup'
